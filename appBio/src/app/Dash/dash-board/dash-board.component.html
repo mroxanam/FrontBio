@@ -1,0 +1,53 @@
+<!-- Main Container -->
+<div class="main-container">
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <app-foto-perfil></app-foto-perfil>
+        </div>
+        <div class="header-content">
+            <div class="welcome-text">
+                <span class="welcome">Bienvenido</span> 
+                <span class="user-name">{{username}}</span> 
+                <span class="as-text">como</span> 
+                <span class="user-role">{{userRol}}</span>
+            </div>
+            <div class="header-actions">
+                <button class="btn-credentials" (click)="abrirModalCredenciales()">Cambiar Credenciales</button>
+                <button class="btn-logout" (click)="logout()">Cerrar Sesión</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content Container -->
+    <div class="content-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <ul class="menu-list">
+                <li *ngFor="let item of menuItems" class="menu-item">
+                    <a [routerLink]="[item.route]" [routerLinkActive]="'active'">
+                        <i class="material-icons">{{item.icon}}</i>
+                        <span>{{item.label}}</span>
+                    </a>
+                    <li class="menu-item">
+                        <a [routerLink]="'/dash/cliente'" routerLinkActive="active">
+                            <i class="material-icons">group</i>
+                            <span>Clientes</span>
+                        </a>
+                    </li>
+                <!-- Facturas Link -->
+                <li class="menu-item">
+                    <a [routerLink]="'/dash/factura'" routerLinkActive="active">
+                        <i class="material-icons">receipt</i>
+                        <span>Factura</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+</div>

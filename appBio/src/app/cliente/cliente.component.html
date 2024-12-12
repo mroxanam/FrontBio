@@ -1,0 +1,12 @@
+<!-- cliente.component.html -->
+<div *ngIf="clients.length === 0">
+  <p>No hay clientes disponibles</p>
+</div>
+
+<div *ngIf="clients.length > 0">
+  <ul>
+    <li *ngFor="let client of clients" (click)="selectClient(client)">
+      {{ client.nombre }} {{ client.apellido }}
+    </li>
+  </ul>
+</div>

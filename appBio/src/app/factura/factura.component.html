@@ -1,0 +1,75 @@
+<div class="factura-container">
+  <!-- Encabezado: Empresa -->
+  <div class="encabezado">
+    <div class="empresa">
+      <img src="/logo-biogas.png" alt="Logo Empresa" class="logo" />
+      <div>
+        <h1>Empresa BIOGAS S.R.L</h1>
+        <p><strong>CUIT:</strong> 30-12345678-9</p>
+        <p><strong>Dirección:</strong> Avenida Principal 123</p>
+        <p><strong>Ciudad:</strong> Córdoba, CP 5100</p>
+      </div>
+    </div>
+    <div class="factura-info">
+      <h1>FACTURA</h1>
+      <p><strong>Número:</strong> {{ facturaSeleccionada?.numeroFactura }}</p>
+      <p><strong>Fecha de Emisión:</strong> {{ facturaSeleccionada?.fechaEmision | date }}</p>
+      <p><strong>Fecha de Vencimiento:</strong> {{ facturaSeleccionada?.fechaVencimiento | date }}</p>
+    </div>
+  </div>
+
+  <!-- Línea divisoria -->
+  <hr />
+
+  <!-- Sección de Cliente -->
+  <div class="cliente">
+    <h3>Datos del Cliente</h3>
+    <div *ngIf="facturaSeleccionada">
+      <p><strong>Nombre:</strong> {{ facturaSeleccionada?.cliente?.nombre }} {{ facturaSeleccionada?.cliente?.apellido }}</p>
+      <p><strong>DNI:</strong> {{ facturaSeleccionada?.cliente?.dni }}</p>
+      <p><strong>Email:</strong> {{ facturaSeleccionada?.cliente?.email }}</p>
+    </div>
+    <div *ngIf="!facturaSeleccionada">
+      <p>No se ha seleccionado una factura.</p>
+    </div>
+  </div>
+
+  <!-- Línea divisoria -->
+  <hr />
+
+  <!-- Detalle de Consumos -->
+  <div class="detalle-factura">
+    <table>
+      <thead>
+        <tr>
+          <th>Descripción</th>
+          <th>Cantidad</th>
+          <th>Precio Unitario</th>
+          <th>Importe</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Consumo Mensual</td>
+          <td>{{ facturaSeleccionada?.consumoMensual }}</td>
+          <td>{{ facturaSeleccionada?.precioUnitario | currency }}</td>
+          <td>{{ facturaSeleccionada?.consumoMensual * facturaSeleccionada?.precioUnitario | currency }}</td>
+        </tr>
+        <tr>
+          <td>Consumo Total</td>
+          <td>{{ facturaSeleccionada?.consumoTotal }}</td>
+          <td>{{ facturaSeleccionada?.precioUnitario | currency }}</td>
+          <td>{{ facturaSeleccionada?.consumoTotal * facturaSeleccionada?.precioUnitario | currency }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Línea divisoria -->
+  <hr />
+
+  <!-- Total -->
+  <div class="total">
+    <h3>Total a Pagar: {{ facturaSeleccionada?.consumoTotal * facturaSeleccionada?.precioUnitario | currency }}</h3>
+  </div>
+</div>

@@ -1,0 +1,448 @@
+/* Estilos básicos del dashboard */
+.user-content {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(120, 130, 140, 0.13);
+    background: #f5f5f5;
+}
+
+.user-info {
+    margin-top: 15px;
+}
+
+.user-info h5 {
+    margin-bottom: 5px;
+    font-weight: 300;
+    color: #99abb4;
+}
+
+.role-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #1976d2;
+    color: white;
+    margin-top: 5px;
+}
+
+/* Estilos específicos por rol */
+.role-badge[data-role="Cliente"] {
+    background-color: #1976d2;
+}
+
+.role-badge[data-role="Manager"] {
+    background-color: #bbf321;
+}
+
+.role-badge[data-role="Tecnico"] {
+    background-color: #4caf50;
+}
+
+.role-badge[data-role="Administracion"] {
+    background-color: #ff5722;
+}
+
+.user-role-display {
+    background: rgba(0, 0, 0, 0.1);
+    margin: 10px 15px;
+    border-radius: 4px;
+}
+
+.user-role-display i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.role-label {
+    display: block;
+    color: #99abb4;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.role-value {
+    display: block;
+    color: #ffffff !important;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.p-3 {
+    padding: 1rem !important;
+}
+
+.ms-3 {
+    margin-left: 1rem !important;
+}
+
+.text-info {
+    color: #26c6da !important;
+}
+
+.text-white {
+    color: #ffffff !important;
+}
+
+.role-display {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #1e262d;
+    padding: 8px 0;
+    text-align: left;
+    margin: 0 15px;
+    border-bottom: 1px solid rgba(120,130,140,.13);
+}
+
+.role-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar-nav {
+    position: relative;
+    padding-top: 0;
+    height: 100%;
+    overflow-y: auto;
+}
+
+#sidebarnav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-devider {
+    height: 1px;
+    background: rgba(120,130,140,.13);
+    display: block;
+    margin: 15px 0;
+}
+
+.nav-small-cap {
+    font-size: 12px;
+    padding: 15px 30px;
+    white-space: nowrap;
+    display: block;
+    color: #99abb4;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.scroll-sidebar {
+    height: calc(100vh - 70px);
+    position: relative;
+    overflow-y: auto;
+}
+
+.left-sidebar {
+    position: fixed;
+    width: 240px;
+    height: 100%;
+    top: 0;
+    z-index: 20;
+    background: #242a33;
+    padding-top: 70px;
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+}
+
+.welcome-message {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    color: #ffffff;
+    font-size: 14px;
+    height: 100%;
+    white-space: pre;
+}
+
+.welcome-text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-right: auto;
+}
+
+.welcome, .as-text {
+    color: #ffffff;
+    display: inline-block;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.user-name, .user-role {
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.role-prefix {
+    color: #99abb4;
+    margin: 0 5px;
+}
+
+.spacer {
+    width: 8px;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.logo-container img {
+    width: 69px;
+    height: 69px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+app-foto-perfil {
+    display: block;
+    width: 69px;
+    height: 69px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding-left: 100px;
+}
+
+.header-actions {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
+/* Button Styles */
+.btn-credentials, .btn-logout {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-credentials {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.btn-credentials:hover {
+    background-color: #27ae60;
+}
+
+.btn-logout {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-logout:hover {
+    background-color: #c0392b;
+}
+
+/* Content Container */
+.content-container {
+    display: flex;
+    flex: 1;
+    background-color: #f5f6fa;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    padding: 1rem 0;
+}
+
+/* Estilos del Menú */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent; /* Sin borde por defecto */
+}
+
+/* Estilo Hover */
+.menu-item:hover {
+    background-color: #34495e;
+    color: #2ecc71;
+}
+
+/* Estilo Activo */
+.menu-item .active,
+.menu-item.active {
+    background-color: #34495e;
+    color: #2ecc71;
+    border-left: 4px solid #2ecc71;
+}
+
+/* Ajustes específicos para la opción "Clientes" */
+.menu-item a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-item a i {
+    font-size: 20px; /* Ajusta el tamaño del ícono */
+    color: #ecf0f1;  /* Color por defecto */
+}
+
+.menu-item a:hover i {
+    color: #2ecc71;  /* Cambio de color al pasar el ratón */
+}
+
+.menu-item a span {
+    font-size: 14px;  /* Ajusta el tamaño del texto */
+    font-weight: 500;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+/* Estilos para la lista de clientes */
+.client-list {
+    padding: 1rem;
+    background-color: #34495e;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.client-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #2c3e50;
+}
+
+.client-item:last-child {
+    border-bottom: none;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #2ecc71; /* Borde verde */
+}
+
+.btn-select {
+    padding: 0.3rem 0.6rem;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-select:hover {
+    background-color: #27ae60;
+}
+
+/* Estilos para el contenedor de cliente seleccionado */
+.cliente-container {
+    padding: 1.5rem;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.cliente-container h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.cliente-container p {
+    margin: 0.5rem 0;
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.cliente-container p strong {
+    color: #34495e;
+}
+
+/* Ajustes para la sección de "Clientes" en la barra lateral */
+.menu-item a span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.menu-item:hover .client-list {
+    background-color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+    .client-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-select {
+        margin-top: 5px;
+    }
+}

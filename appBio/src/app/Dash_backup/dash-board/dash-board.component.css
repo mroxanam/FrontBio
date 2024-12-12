@@ -1,0 +1,198 @@
+/* Estilos básicos del dashboard */
+
+.user-content {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(120, 130, 140, 0.13);
+    background: #f5f5f5;
+}
+
+.user-info {
+    margin-top: 15px;
+}
+
+.user-info h5 {
+    margin-bottom: 5px;
+    font-weight: 300;
+    color: #99abb4;
+}
+
+.role-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #1976d2;
+    color: white;
+    margin-top: 5px;
+}
+
+/* Estilos específicos por rol */
+.role-badge[data-role="Cliente"] {
+    background-color: #1976d2;
+}
+
+.role-badge[data-role="Manager"] {
+    background-color: #2196f3;
+}
+
+.role-badge[data-role="Tecnico"] {
+    background-color: #4caf50;
+}
+
+.role-badge[data-role="Administracion"] {
+    background-color: #ff5722;
+}
+
+.user-role-display {
+    background: rgba(0, 0, 0, 0.1);
+    margin: 10px 15px;
+    border-radius: 4px;
+}
+
+.user-role-display i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.role-label {
+    display: block;
+    color: #99abb4;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.role-value {
+    display: block;
+    color: #ffffff !important;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.p-3 {
+    padding: 1rem !important;
+}
+
+.ms-3 {
+    margin-left: 1rem !important;
+}
+
+.text-info {
+    color: #26c6da !important;
+}
+
+.text-white {
+    color: #ffffff !important;
+}
+
+.role-display {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #1e262d;
+    padding: 8px 0;
+    text-align: left;
+    margin: 0 15px;
+    border-bottom: 1px solid rgba(120,130,140,.13);
+}
+
+.role-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar-nav {
+    position: relative;
+    padding-top: 0;
+    height: 100%;
+    overflow-y: auto;
+}
+
+#sidebarnav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-devider {
+    height: 1px;
+    background: rgba(120,130,140,.13);
+    display: block;
+    margin: 15px 0;
+}
+
+.nav-small-cap {
+    font-size: 12px;
+    padding: 15px 30px;
+    white-space: nowrap;
+    display: block;
+    color: #99abb4;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.scroll-sidebar {
+    height: calc(100vh - 70px);
+    position: relative;
+    overflow-y: auto;
+}
+
+.left-sidebar {
+    position: fixed;
+    width: 240px;
+    height: 100%;
+    top: 0;
+    z-index: 20;
+    background: #242a33;
+    padding-top: 70px;
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+}
+
+.welcome-message {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    color: #ffffff;
+    font-size: 14px;
+    height: 100%;
+    white-space: pre;
+}
+
+.welcome-text {
+    color: #99abb4;
+    margin-right: 5px;
+}
+
+.user-name {
+    font-weight: 600;
+    color: #26c6da;
+    margin: 0 5px;
+}
+
+.role-prefix {
+    color: #99abb4;
+    margin: 0 5px;
+}
+
+.user-role {
+    color: #ffffff;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.spacer {
+    width: 8px;
+}

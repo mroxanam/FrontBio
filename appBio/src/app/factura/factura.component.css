@@ -1,0 +1,105 @@
+/* Contenedor Principal */
+.factura-container {
+    width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #000; /* Línea negra para el borde principal */
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Encabezado: Datos Empresa y Factura */
+  .encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px; /* Aumentar espacio entre encabezado y contenido */
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+  }
+  
+  .empresa {
+    display: flex;
+    gap: 15px; /* Separar más el logo de los datos de la empresa */
+  }
+  
+  .logo {
+    max-width: 120px;
+    height: auto;
+  }
+  
+  .empresa h1 {
+    font-size: 20px;
+    margin: 0;
+    color: #000;
+  }
+  
+  .factura-info h1 {
+    font-size: 24px;  /* Aumentar tamaño de "FACTURA" */
+    color: #000;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  
+  /* Línea divisoria */
+  hr {
+    border: 0;
+    border-top: 2px solid #000;
+    margin: 20px 0;
+  }
+  
+  /* Datos del Cliente */
+  .cliente {
+    border: 1px solid #000;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .cliente h3 {
+    font-size: 16px;
+    color: #000;
+    margin: 0 0 10px;
+  }
+  
+  /* Tabla de Descripción */
+  .detalle-factura table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .detalle-factura th,
+  .detalle-factura td {
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #000;
+  }
+  
+  .detalle-factura th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .detalle-factura td {
+    background-color: #fff;
+  }
+  
+  /* Total y Observaciones */
+  .total-observaciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 2px solid #000;
+    padding-top: 10px;
+  }
+  
+  .total-pagar h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+  }
+  
+  
+  

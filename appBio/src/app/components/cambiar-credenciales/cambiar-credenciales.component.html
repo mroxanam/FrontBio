@@ -1,0 +1,74 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h2 class="modal-title">Cambiar Credenciales</h2>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="credencialesForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="form-group">
+        <mat-label>Nuevo Usuario</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="nuevoUsername"
+          placeholder="Ingrese nuevo usuario"
+        />
+        <mat-error *ngIf="credencialesForm.get('nuevoUsername')?.errors?.['required']">
+          El usuario es requerido
+        </mat-error>
+        <mat-error *ngIf="credencialesForm.get('nuevoUsername')?.errors?.['minlength']">
+          El usuario debe tener al menos 4 caracteres
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form-group">
+        <mat-label>Nueva Contraseña</mat-label>
+        <input
+          matInput
+          type="password"
+          formControlName="nuevaPassword"
+          placeholder="Ingrese nueva contraseña"
+        />
+        <mat-error *ngIf="credencialesForm.get('nuevaPassword')?.errors?.['required']">
+          La contraseña es requerida
+        </mat-error>
+        <mat-error *ngIf="credencialesForm.get('nuevaPassword')?.errors?.['minlength']">
+          La contraseña debe tener al menos 6 caracteres
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form-group">
+        <mat-label>Contraseña Actual</mat-label>
+        <input
+          matInput
+          type="password"
+          formControlName="passwordActual"
+          placeholder="Ingrese su contraseña actual"
+        />
+        <mat-error *ngIf="credencialesForm.get('passwordActual')?.errors?.['required']">
+          La contraseña actual es requerida
+        </mat-error>
+      </mat-form-field>
+
+      <div *ngIf="error" class="alert alert-danger">
+        {{ error }}
+      </div>
+
+      <div *ngIf="success" class="alert alert-success">
+        {{ success }}
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" mat-button (click)="cerrar()">
+          Cancelar
+        </button>
+        <button 
+          type="submit" 
+          mat-raised-button 
+          color="primary" 
+          [disabled]="credencialesForm.invalid || loading">
+          {{ loading ? 'Actualizando...' : 'Actualizar' }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

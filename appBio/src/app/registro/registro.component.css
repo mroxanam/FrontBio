@@ -1,0 +1,182 @@
+.img-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.212);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  min-width: 18rem;
+  max-width: 33rem;
+  width: 100%;
+}
+
+.card-title {
+  margin-bottom: 20px; /* Espaciado adicional */
+}
+
+button.btn {
+  transition: 0.5s; /* Transición suave */
+}
+
+.btn:hover {
+  background-color: #038412; /* Color más oscuro al pasar el mouse */
+}
+
+:host {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background: url('../assets/images/con_lamparita.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 20px;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.212);
+  border-radius: 10px;
+  padding: 12px;
+  width: 28%;
+  max-width: 280px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-left: 20%;
+  margin-top: 30px;
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #000;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 8px;
+}
+
+label {
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-control {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 6px;
+  font-size: 0.9em;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 6px;
+  font-size: 0.9em;
+}
+
+.btn-primary {
+  background-color: #2d8a30;
+  border-color: #2d8a30;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #1e6920;
+  border-color: #1e6920;
+}
+
+.btn-link {
+  background-color: transparent; /* Fondo transparente */
+  color: #000; /* Color negro para el texto */
+  border: none; /* Sin bordes */
+  text-decoration: none; /* Sin subrayado */
+  transition: color 0.3s, background-color 0.3s; /* Transición suave */
+}
+
+.btn-link:focus,
+.btn-link:active,
+.btn-link:hover {
+  background-color: #000; /* Fondo blanco cuando se haga clic */
+  color: #fff; /* Texto blanco cuando se haga clic */
+  text-decoration: none; /* Sin subrayado en estos estados */
+}
+
+
+.alert {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  font-size: 80%;
+  margin-top: 5px;
+}
+
+footer {
+    margin-top: 3rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: #666;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+footer a {
+    color: #010810;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
